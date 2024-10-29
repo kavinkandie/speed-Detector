@@ -1,21 +1,18 @@
-function myGrading(score) {
-    var result;
-  
-    switch(true) {
-      case (score >=79):
-         result= `distinction`;
-          break;
-      case (score <= 78&& score >= 60):
-          result = 'credit';
-           break;
-      case (score <= 59&& score >= 50):
-          result= 'pass';
-           break;
-         case (score <= 49 && score >= 40):
-          result= 'fail';
-           break;
-           default:(score<=39)
-            return 'INVALID SCORE'; 
+
+function checkSpeed(speed) {
+    const speedLimit = 70;
+    if (speed <= speedLimit) {
+       return console.log(`Ok`);
     }
-    return result;
+    else {
+        const points = Math.floor((speed - speedLimit) / 5);
+        if (points >= 12)
+           return console.log(`License suspended`)
+        else{
+            return console.log(points)
+        }
+
+    }
 }
+checkSpeed(150)
+
